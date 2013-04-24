@@ -12,3 +12,8 @@ logs
 results
 
 npm-debug.log
+
+phonegap.zip
+
+node_modules
+sencha/build
