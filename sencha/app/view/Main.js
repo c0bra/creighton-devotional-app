@@ -10,7 +10,7 @@ Ext.define('creighton.view.Main', {
 
         items: [
             {
-                title: 'Welcome',
+                title: 'Reflection',
                 iconCls: 'home',
 
                 styleHtmlContent: true,
@@ -34,8 +34,8 @@ Ext.define('creighton.view.Main', {
                 // ].join("")
             },
             {
-                title: 'Get Started',
-                iconCls: 'action',
+                title: 'Readings',
+                iconCls: 'anchor',
 
                 items: [
                     {
