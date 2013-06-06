@@ -1,0 +1,23 @@
+{
+  "name": "phonegap-push-test",
+  "version": "0.0.0",
+  "description": "test of phonegap build push plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bhann@bitbucket.org/bhann/phonegap-push-test.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "6a351648a24d5fd53c4fdfdbf3ea9f16f93159b1",
+  "devDependencies": {
+    "file": "~0.2.1",
+    "node-zip": "~1.0.1",
+    "konphyg": "~1.2.0",
+    "phonegap-build-api": "~0.3.3"
+  }
+}
