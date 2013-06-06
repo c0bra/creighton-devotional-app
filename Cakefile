@@ -12,7 +12,7 @@ config = konphyg.all();
 # Folder where built project will reside
 phonegap_folder = 'www'
 phonegap_filename = 'phonegap.zip'
-built_filename = "../#{phonegap_filename}"
+built_filename = "#{phonegap_filename}"
 
 task 'bundle', 'Build the sencha app and publish it to phonegap-build', ->
   invoke 'package', ->
@@ -69,7 +69,7 @@ task 'phonegap-zip', 'Zip the packaged app up for phonegap', ->
   data = zip.generate({ base64:false, compression: 'DEFLATE'});
 
   # Write the zip data out to the zip file
-  fs.writeFileSync "../#{phonegap_filename}", data, 'binary'
+  fs.writeFileSync "#{phonegap_filename}", data, 'binary'
 
   console.log "Phonegap project built!"
 
