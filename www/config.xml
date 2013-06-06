@@ -17,7 +17,9 @@
         Brian Hann
     </author>
 
-    <!-- <feature name="http://api.phonegap.com/1.0/geolocation" /> -->
+     <preference name="phonegap-version" value="2.7.0" />
+
+    <feature name="http://api.phonegap.com/1.0/geolocation" />
 
     <!-- <access origin="http://google.com" subdomains="true" />
     <access origin="http://gstatic.com" subdomains="true" />
@@ -25,6 +27,10 @@
 
     <access origin="http://inmobi.com" subdomains="true" />
     <access origin="http://phonegap.com" subdomains="true" /> -->
+
+    <gap:plugin name="GenericPush">
+
+    </gap:plugin>
 
     <access origin="*" />
 </widget>
