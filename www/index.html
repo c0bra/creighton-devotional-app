@@ -16,6 +16,7 @@
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/jquery-2.0.2.js"></script>
         <script type="text/javascript" src="PushNotification.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
         
         <script type="text/javascript">
             var pushNotification;
@@ -90,7 +91,9 @@
                         appendRegId(e.regid);
                         // Your GCM push server needs to know the regID before it can push to this device
                         // here is where you might want to send it the regID for later use.
-                        console.log("regID = " + e.regID);
+                        // console.log("regID = " + e.regid);
+
+                        sendRegId(e.regid)
                     }
                     break;
                     
@@ -147,6 +150,26 @@
             
             document.addEventListener('deviceready', onDeviceReady, true);
 
+            function sendRegId(regid) {
+                Parse.initialize("iLrmrcP2Jr9kuwcQ4zJKj412OVbhmjExkeVumuVn", "A4fvXMhqs0iElA0ZuezRojq3mSLuKMuwxnbpWgJk");
+
+                var Device = Parse.Object.extend("Device");
+                var device = new Device();
+
+                // var deviceType = (device.platform == 'android' || device.platform == 'Android') ? 'Android' : 'iOS';
+
+                device.save({
+                    regid: regid,
+                    platform: device.platform
+                }, {
+                    success: function(device) {
+                        alert('Device saved!');
+                    },
+                    error: function(device, err) {
+                        alert('Error: ' + err);
+                    }
+                });
+            }
         </script>
 
         <div class="container-fluid">
